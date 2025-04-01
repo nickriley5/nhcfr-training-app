@@ -24,6 +24,25 @@ function Dashboard() {
         </div>
       )}
 
+      {(role === "officer" || role === "admin") && (
+  <div
+    onClick={() => navigate("/officer-signoffs")}
+    className="cursor-pointer bg-slate-800 hover:bg-slate-700 p-6 rounded-lg shadow-md w-full max-w-md"
+  >
+    <h2 className="text-xl font-bold">📘 Probation Book Signoffs</h2>
+    <p className="text-sm text-gray-300">Review and sign off probie progress.</p>
+  </div>
+)}
+<div
+  onClick={() => navigate("/progress-dashboard")}
+  className="cursor-pointer bg-slate-800 hover:bg-slate-700 p-6 rounded-lg shadow-md w-full max-w-md"
+>
+  <h2 className="text-xl font-bold">📊 Progress Dashboard</h2>
+  <p className="text-sm text-gray-300">View department-wide completion.</p>
+</div>
+
+
+
       {/* You can add officer/admin views here later */}
     </div>
   );
